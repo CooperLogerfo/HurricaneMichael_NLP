@@ -182,7 +182,8 @@ full_plot <- ggmap(michael_map) + geom_point(aes(x = x_c, y = y_c, size = sizes,
   labs(title = 'date: 10-{closest_state}-2018', size = "Num Tweets") +
   scale_colour_gradient(low = "violet", high = "violetred4")
 
-#full_plot
+full_plot
+anim_save("sent_and_size.gif")
 
 # gganimate, plotting number of tweets from each city, on each day
 size_plot <- ggmap(michael_map) + geom_point(aes(x = x_c, y = y_c, size = sizes), alpha = 0.5, data = full_df) +
@@ -190,7 +191,9 @@ size_plot <- ggmap(michael_map) + geom_point(aes(x = x_c, y = y_c, size = sizes)
   transition_states(full_df$date, transition_length = 1, state_length = 12) +
   labs(title = 'date: 10-{closest_state}-2018', size = "Num Tweets")
 
-#size_plot
+size_plot
+anim_save("size.gif")
+
 
 # gganimate, plotting sentiment of tweets from each city, on each day
 sent_plot <- ggmap(michael_map) + geom_point(aes(x = x_c, y = y_c, size = 5, colour = avg_sent ), alpha = 0.5, data = full_df) +
@@ -199,8 +202,8 @@ sent_plot <- ggmap(michael_map) + geom_point(aes(x = x_c, y = y_c, size = 5, col
   labs(title = 'date: 10-{closest_state}-2018') +
   scale_colour_gradient(low = "violet", high = "violetred4")
 
-#sent_plot
-
+sent_plot
+anim_save("sent.gif")
 
 # Two different options for converting list of dataframes into single dataframe
 # Albany_dfs <- lapply(Albany_dfs, function(x) as.data.frame(x))
