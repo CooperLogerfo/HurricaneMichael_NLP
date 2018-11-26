@@ -225,4 +225,4 @@ tw_dfm <- dfm(tw_corp, remove_punct = TRUE, tolower = TRUE,
 
 textplot_wordcloud(tw_dfm, rotation=.1, min_size=.75, max_size=4, max_words=40)
 
-
+#adding comment at end, testing RStudio git version control
