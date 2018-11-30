@@ -14,7 +14,6 @@ library(ggplot2)
 library(quanteda)
 library(syuzhet)
 library(tm)
-setwd("/Users/cooperlogerfo/desktop/python_workspace/")
 
 
 #read 
@@ -81,28 +80,28 @@ tokenize_bow <- function(tweets){
 
 
 #1 read in data
-setwd("/Users/cooperlogerfo/desktop/Alb_data/")
+setwd("/Alb_data/")
 Albany_dfs <- lapply(list.files(pattern = "A_Oct"), 
                   function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
-setwd("/Users/cooperlogerfo/desktop/Col_data/")
+setwd("/Col_data/")
 Col_dfs <- lapply(list.files(pattern = "Col_Oct"),
                   function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
-setwd("/Users/cooperlogerfo/desktop/Dot_data/")
+setwd("/data/Dot_data/")
 Dot_dfs <- lapply(list.files(pattern = "D_Oct"),
                   function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
-setwd("/Users/cooperlogerfo/desktop/MB_data/")
+setwd("/data/MB_data/")
 MB_dfs <- lapply(list.files(pattern = "MB_Oct"),
                    function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
-setwd("/Users/cooperlogerfo/desktop/M_data/")
+setwd("/data/M_data/")
 Mont_dfs <- lapply(list.files(pattern = "M_Oct"),
                    function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
-setwd("/Users/cooperlogerfo/desktop/PC_data/")
+setwd("/data/PC_data/")
 PC_dfs <- lapply(list.files(pattern = "PC_Oct"),
                  function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
-setwd("/Users/cooperlogerfo/desktop/P_data/")
+setwd("/data/P_data/")
 Pen_dfs <- lapply(list.files(pattern = "P_Oct"),
                   function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
-setwd("/Users/cooperlogerfo/desktop/Tal_data/")
+setwd("/data/Tal_data/")
 Tal_dfs <- lapply(list.files(pattern = "TAL_Oct"),
                   function(x) jsonlite::fromJSON(sprintf("[%s]", paste(readLines(x),collapse=","))))
 
